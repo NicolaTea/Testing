@@ -79,7 +79,6 @@ public class Main {
         System.out.print("Enter the name of the game: ");
         String gameName = scanner.nextLine();
         controller.addGame(gameName);
-        System.out.println("Game \"" + gameName + "\" has been added.");
     }
 
     // Delete a game
@@ -87,7 +86,6 @@ public class Main {
         System.out.print("Enter the name of the game to delete: ");
         String deleteGameName = scanner.nextLine();
         controller.deleteGame(deleteGameName);
-        System.out.println("Game \"" + deleteGameName + "\" has been deleted.");
     }
 
     // Update a game
@@ -97,7 +95,7 @@ public class Main {
         System.out.print("Enter the new name for the game: ");
         String newGameName = scanner.nextLine();
         controller.updateGame(oldGameName, newGameName);
-        System.out.println("Game \"" + oldGameName + "\" has been updated to \"" + newGameName + "\".");
+
     }
 
     // Add a trophy to a game
@@ -112,7 +110,6 @@ public class Main {
         String trophyTypeStr = scanner.nextLine().toUpperCase();
         TrophyTypes trophyType = TrophyTypes.valueOf(trophyTypeStr);
         controller.addTrophyToGame(gameNameForTrophy, trophyTitle, trophyDescription, trophyType);
-        System.out.println("Trophy \"" + trophyTitle + "\" has been added to the game \"" + gameNameForTrophy + "\".");
     }
 
     // Delete a trophy from a game
@@ -122,7 +119,6 @@ public class Main {
         System.out.print("Enter the title of the trophy to delete: ");
         String trophyTitleToDelete = scanner.nextLine();
         controller.deleteTrophyFromGame(gameNameForDeleteTrophy, trophyTitleToDelete);
-        System.out.println("Trophy \"" + trophyTitleToDelete + "\" has been deleted from the game \"" + gameNameForDeleteTrophy + "\".");
     }
 
     // Update a trophy in a game
@@ -139,7 +135,6 @@ public class Main {
         String newTrophyTypeStr = scanner.nextLine().toUpperCase();
         TrophyTypes newTrophyType = TrophyTypes.valueOf(newTrophyTypeStr);
         controller.updateTrophyForGame(gameNameForUpdateTrophy, oldTrophyTitle, newTrophyTitle, newTrophyDescription, newTrophyType);
-        System.out.println("Trophy \"" + oldTrophyTitle + "\" has been updated.");
     }
 
     // Display all games
